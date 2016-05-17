@@ -13,6 +13,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 
+# Add-oni
+gem 'draper'
+gem 'friendly_id', '~> 5.1'
+
 # Running the app
 gem 'rails_12factor', group: :production
 gem 'unicorn'
