@@ -11,9 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160517111909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "trails", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "distance"
+    t.integer  "duration"
+    t.string   "local_number"
+    t.string   "eu_number"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "trails", ["local_number"], name: "index_trails_on_local_number", unique: true, using: :btree
 
 end
