@@ -1,0 +1,78 @@
+AllCops:
+  Exclude:
+    - '**/db/**/*'
+    - '**/config/**/*'
+    - '**/vendor/**/*'
+    - '**/Gemfile'
+    - '**/Gemfile.lock'
+
+Rails:
+  Enabled: true
+
+Style/BlockDelimiters:
+  EnforcedStyle: semantic
+  IgnoredMethods:
+    - specify
+    - let!
+    - let
+    - subject
+    - it
+    - validate
+    - sidekiq_retry_in
+  FunctionalMethods:
+    - recurrence
+
+Style/DotPosition:
+  EnforcedStyle: trailing
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: nested
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/RaiseArgs:
+  EnforcedStyle: compact
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Rails/Date:
+  EnforcedStyle: flexible
+
+Style/RescueModifier:
+  Exclude:
+    - '**/spec/**/*'
+
+Metrics/LineLength:
+  Max: 120
+  # To make it possible to copy or click on URIs in the code, we allow lines
+  # contaning a URI to be longer than Max.
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 15
+
+Metrics/CyclomaticComplexity:
+  Max: 9
+
+Metrics/ClassLength:
+  CountComments: false
+  Max: 150
+
+Metrics/ModuleLength:
+  CountComments: false
+  Max: 150
+
+Metrics/AbcSize:
+  Max: 23
+
+Metrics/PerceivedComplexity:
+  Max: 11
