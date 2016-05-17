@@ -12,6 +12,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 
 # Running the app
+gem 'rails_12factor', group: :production
 gem 'unicorn'
 gem 'foreman'
 
